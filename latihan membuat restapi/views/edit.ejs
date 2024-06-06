@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form action="/edit/<%= datas.id%>?_method=PATCH" method="post">
+            <input type="text" name="name" placeholder="<%= datas.name%>"> 
+            <input type="text" name="todoList" placeholder="<%= datas.todoList%>">
+            <input type="time" name="timeLog" placeholder="<%= datas.timeLog%>">
+            <button type="submit">edit</button>
+        </form>
+        <a href="/">back home</a>
+    </div>
+</body>
+</html>

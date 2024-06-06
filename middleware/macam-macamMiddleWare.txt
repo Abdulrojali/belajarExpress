@@ -1,0 +1,81 @@
+jenis jenis middleware
+
+
+1. middleware tingkat aplikasi
+contoh penggunaanya ;
+app.use((req, res, next) => { 
+  console.log('Waktu:', date.now()) 
+  next() 
+})
+
+
+2. middleware tingkat router
+Middleware tingkat router bekerja dengan cara yang sama seperti middleware tingkat aplikasi,
+ kecuali ia terikat pada sebuah instanceexpress.Router()
+
+ contoh penggunaanya ;
+ const express = require('express') 
+const app = express() 
+const router = express.Router() 
+
+// fungsi middleware tanpa jalur mount. Kode ini dieksekusi untuk setiap permintaan ke router 
+router.use((req, res, next) => { 
+  console.log('Time:', Date.now()) 
+  next() 
+}) 
+
+// sub-middleware tumpukan menunjukkan info permintaan untuk semua jenis permintaan HTTP ke jalur /user/:id 
+router.use('/user/:id', (req, res, next) => { 
+  console.log('Request URL:', req.originalUrl) 
+  next() 
+}, (req, res, next) => { 
+  console.log('Request Type:', req.method) 
+  next() 
+}) 
+
+// sub-stack middleware yang menangani permintaan GET ke jalur /user/:id 
+router.get('/user/:id', (req, res, next) => { 
+  // jika ID pengguna 0, lewati ke router berikutnya 
+  if (req.params.id === '0') next('route') 
+  // jika tidak, teruskan kontrol ke fungsi middleware berikutnya di tumpukan ini 
+  else next() 
+}, (req, res, next) => { 
+  // render res halaman biasa 
+  . render('biasa') 
+})
+
+
+3. Middleware penanganan kesalahan
+Definisikan fungsi middleware penanganan kesalahan dengan cara yang sama seperti fungsi middleware 
+lainnya, kecuali dengan empat argumen, bukan tiga, khususnya dengan tanda tangan :(err, req, res, next)
+
+contoh penggunaanya ;
+app.use((err, req, res, next) => { 
+  console.error(err.stack) 
+  res.status(500).send('Ada yang rusak!') 
+})
+
+
+4. Middleware bawaan
+Express memiliki fungsi middleware bawaan berikut:
+* app.use( express.static() )                                          
+// menyajikan aset statis seperti file HTML, gambar, dan sebagainya   
+
+* app.use( express.json() )                                             
+// mem-parsing permintaan masuk dengan payload JSON. CATATAN: Tersedia dengan Express 4.16.0+
+
+* app.use( express.urlencoded() )                                       
+// mem-parsing permintaan masuk dengan payload yang dikodekan URL. CATATAN: Tersedia dengan Express 4.16.0+
+
+
+5. Middleware pihak ketiga
+Anda dapat menginstal modul node.js untuk fungsionalitas yang diperlukan, lalu memuatnya di aplikasi Anda di tingkat aplikasi
+atau di tingkat router.
+
+contoh penggunaanya 
+const express = require('express') 
+const app = express() 
+const cookieParser = require('cookie-parser') 
+
+// memuat aplikasi middleware penguraian cookie.use 
+(cookieParser())

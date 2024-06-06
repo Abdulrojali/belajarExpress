@@ -1,0 +1,31 @@
+routing didalam express diartikan sebagai bagaimana server merespon permintaan dari client dan 
+sebaliknya 
+contoh penggunaannya 
+
+app.methode(path,handler)
+app.get('/',(req,res)=>{
+    res.end('welcome')
+})
+
+
+macam macam permintaan client ke server
+
+1. get 
+app.get('/',(req,res)=>{
+    res.end('welcome')
+})
+
+2. post
+app.post('/', (req, res) => {
+  res.send('Got a POST request')
+})
+
+3. put
+app.put('/user', (req, res) => {
+  res.send('Got a PUT request at /user')
+})
+
+4. delete
+app.delete('/user', (req, res) => {
+  res.send('Got a DELETE request at /user')
+})

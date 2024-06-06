@@ -1,0 +1,19 @@
+{
+  "name": "latihan-membuat-comments",
+  "version": "1.0.0",
+  "description": "latihan membuat comments di express js dan ejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://Abdulrojali/github.com"
+  },
+  "author": "abdul rojali",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.19.2"
+  }
+}

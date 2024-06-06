@@ -1,0 +1,17 @@
+untuk menjalankan express sebagai server kita harus menggunakan beberapa langkah 
+
+1. buat variabel express dengan mengimport module express
+contoh : const express = reqiure('express')
+ const app=express()
+
+ 2. menjalankan di server dengan methode get
+ app.methode(path,handler)
+ contoh
+ app.get('/',(req,res)=>{
+    res.end('hello world')
+ })
+
+ 3. menjalankan node js di server browser
+ app.listen(3000,()=>{
+    console.log('berjalan di port 3000')
+ })

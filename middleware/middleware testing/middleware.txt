@@ -1,0 +1,35 @@
+middleware didalam express js digunakan untuk menangani permintaan http request
+middlware adalah function biasa yang digunakan untuk melakukan manipulasi response atau request
+contoh penggunaannya 
+const express=require('express')
+const app=express()
+
+const testing=function(req,res,next){
+    console.log('test')
+    next()
+}
+
+cara menggunakan middleware yang telah di buat menggunakan use
+app.use(testing)
+
+membuat request permintaan
+app.get('/',(req,res)=>{
+    console.log(res)
+})
+
+// menjalankan di server localhost 8080
+app.listen(8080,()=>{
+    console.log('http://localhost:8080')
+})
+
+// atau cara lain membuat middleware
+
+app.use('/login',(req,res,next)=>{
+    const {password} =req.body
+    if(password){
+        next()
+    }
+    else{
+        res.render('tolong masukkan password')
+    }
+})

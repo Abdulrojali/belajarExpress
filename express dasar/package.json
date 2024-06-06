@@ -1,0 +1,14 @@
+{
+  "name": "latihan-express",
+  "version": "1.0.0",
+  "description": "ini adalah file latihan express pertama saya ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "abdul rojali",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

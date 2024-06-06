@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h3>list comments</h3>
+        <ul>
+            <% for(com of comments) { %>
+                <li><%= com.deskripsi%></li>
+                <% } %>
+        </ul>
+        <a href="/add">add</a>
+    </div>
+</body>
+</html>

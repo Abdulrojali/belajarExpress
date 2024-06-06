@@ -1,0 +1,2 @@
+thrid party middleware adalah sebuah perangkat yang di kembangkan oleh pihak ketiga 
+yang di gunakan untuk mempermudah development.

@@ -1,0 +1,13 @@
+1. get digunakan untuk mengirim request data dikirim melalui url path 
+app.get('/product',(req,res)=>{
+    const data=req.query
+    res.send(data)
+})
+// url path '/product?category=makanan' 
+
+
+2. post digunakan untuk mengirim data request melalui body atau payload dan lebih aman dibandig get
+app.post('/product',(req,res)=>{
+    const dataBody=body.data
+    res.send(dataBody)
+})

@@ -1,0 +1,12 @@
+1. buat directory 
+ mkdir instalasi 
+
+2. pindahkan path ke directory yang di buat
+  cd instalasi
+
+3. buat file package.json di directory 
+ npm init 
+
+4. instalasi expressnya 
+  npm install express@4.7.3
+

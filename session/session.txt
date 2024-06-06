@@ -1,0 +1,5 @@
+session digunakan untuk menyimpan data dengan jumlah yang lebih banyak 
+
+contoh 
+cookies digunakan saja untuk menyimpan data id session sebuah id user 
+sedangkan sessionnya digunakan untuk menyimpan data user 

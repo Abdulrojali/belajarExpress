@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <%  for(value of todo){%>
+            <li>author :<%= value.name %></li>
+            <li>time :<%= value.timeLog %></li>
+            <a href="/viewsDetail/<%=value.id%>">view detail</a>
+            <a href="/edit/<%=value.id%>">update</a>
+            <% } %>
+            
+    </ul>
+    <a href="/">back home</a>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+    "javascript":{
+        "tittle":"javasript",
+        "deskripsi":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, voluptatum ratione debitis dolore fuga repellendus doloribus, molestias voluptas aperiam unde ad provident facere maxime. Tempora.",
+        "img":"home.jpg"
+    },
+    "html":{
+        "tittle":"html",
+        "deskripsi":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, voluptatum ratione debitis dolore fuga repellendus doloribus, molestias voluptas aperiam unde ad provident facere maxime. Tempora.",
+        "img":"home.jpg"
+    },
+    "python":{
+        "tittle":"python",
+        "deskripsi":"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, voluptatum ratione debitis dolore fuga repellendus doloribus, molestias voluptas aperiam unde ad provident facere maxime. Tempora.",
+        "img":"home.jpg"
+    }
+}
